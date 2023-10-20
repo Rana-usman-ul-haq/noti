@@ -1116,8 +1116,8 @@ contract Noti is ERC20, Ownable {
     address public taxWallet;
     mapping (address => bool) public _isWhiteListedFromFee;
 
-    uint256 maxBuyLimit = 8000000 * 10 ** decimals();
-    uint256 maxSellLimit = 8000000 * 10 ** decimals();
+    uint256 public maxBuyLimit = 8000000 * 10 ** decimals();
+    uint256 public maxSellLimit = 8000000 * 10 ** decimals();
 
     IUniswapV2Router02 public immutable uniswapV2Router;
     address public immutable uniswapV2Pair;
