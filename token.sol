@@ -1108,7 +1108,7 @@ interface IUniswapV2Router02 is IUniswapV2Router01 {
     ) external;
 }
 
-contract Nofi is ERC20, Ownable {
+contract Noti is ERC20, Ownable {
     using SafeMath for uint256;
 
     uint256 public buyFee = 3;
@@ -1116,13 +1116,13 @@ contract Nofi is ERC20, Ownable {
     address public taxWallet;
     mapping (address => bool) public _isWhiteListedFromFee;
 
-    uint256 maxBuyLimit = 5000000 * 10 ** decimals();
-    uint256 maxSellLimit = 5000000 * 10 ** decimals();
+    uint256 maxBuyLimit = 8000000 * 10 ** decimals();
+    uint256 maxSellLimit = 8000000 * 10 ** decimals();
 
     IUniswapV2Router02 public immutable uniswapV2Router;
     address public immutable uniswapV2Pair;
 
-    constructor() ERC20("Nofi", "Nofi") {
+    constructor() ERC20("Noti", "Noti") {
         IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(
             0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D
         );
